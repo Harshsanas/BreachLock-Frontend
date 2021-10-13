@@ -2,12 +2,14 @@ import AddNote from "./Components/AddNote";
 import Card from "./Components/Card";
 import { useContext } from "react";
 import { StoreContext } from "./Components/SetContextProvider";
+import "./App.css"
 
 const App = () => {
   const { cards } = useContext(StoreContext);
 
   return (
-    <div >
+    <div className="App">
+    <h1>NOTE APPLICATION</h1>
       <div>
         <AddNote />
       </div>
