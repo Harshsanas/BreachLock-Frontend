@@ -4,14 +4,14 @@ import { useContext } from "react";
 import { StoreContext } from "./SetContextProvider";
 
 const AddNote = () => {
-  const [noteData, setNoteData] = useState({ title: "", body: "", date: "" });
+  const [data, setData] = useState({ title: "", body: "", date: "" });
 
   const { setCards } = useContext(StoreContext);
 
   const handleChange = (e) => {
     let [name, value] = [e.target.name, e.target.value];
-    setNoteData({
-      ...noteData,
+    setData({
+      ...data,
       [name]: value,
     });
   };
@@ -19,38 +19,38 @@ const AddNote = () => {
   const handleSubmit = () => {
     let localData = JSON.parse(localStorage.getItem("cards"));
     if (localData == null) {
-      localStorage.setItem("cards", JSON.stringify([noteData]));
-      setCards([noteData]);
+      localStorage.setItem("cards", JSON.stringify([data]));
+      setCards([data]);
     } else {
-      let arr = localData;
-      arr.push(noteData);
-      localStorage.setItem("cards", JSON.stringify(arr));
+      let elem = localData;
+      elem.push(data);
+      localStorage.setItem("cards", JSON.stringify(elem));
       setCards(localData);
-      // console.log(arr)
+      // console.log(elem)
     }
   };
 
   return (
-    <div>
+    <div style={{float:"left"}}>
       <div>
         <div>
-          <Calendar handleChange={handleChange} data={noteData} />
+          <Calendar handleChange={handleChange} data={data} />
         </div>
         <div>
           <input
             type="text"
-            value={noteData.title}
+            value={data.title}
             name="title"
             onChange={handleChange}
-            placeholder="Title"
+            placeholder="ENTER TITLE"
           />
         </div>
         <div>
           <textarea
-            value={noteData.body}
+            value={data.body}
             name="body"
             onChange={handleChange}
-            placeholder="Note"
+            placeholder="TYPE NOTE HERE"
           />
         </div>
         <div>

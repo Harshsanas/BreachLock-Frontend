@@ -15,3 +15,34 @@ h1{
   display:grid;
   grid-template-columns: 30% 60%;
 }
+
+input{
+width:200px;margin:10px auto;
+border-radius:8px;
+border:1px solid grey;
+padding:5px;
+}
+
+textarea{
+width:200px;margin:10px auto;
+border-radius:8px;
+border:1px solid grey;
+padding:5px;
+height:100px
+}
+
+button{
+  color:white;
+  padding:5px;
+  margin:10px;
+  height:40px;
+  width:80px;
+  cursor:pointer;
+  border-radius:4px;
+  border:none;
+  background-color:#49018C;
+}
+
+p{
+  font-size:18px;
+}
