@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { StoreContextProvider } from "./Context/StoreContextProvider";
+import { StoreContextProvider } from "./Components/SetContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>

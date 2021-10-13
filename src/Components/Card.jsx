@@ -1,7 +1,7 @@
 const Card = ({ date, title, body }) => {
   return (
-    <div className={style.card}>
-      <div className={style.cardHeader}>
+    <div>
+      <div>
         <p>{title}</p>
         <p>{date}</p>
       </div>

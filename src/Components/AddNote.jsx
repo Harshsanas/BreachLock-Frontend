@@ -1,10 +1,7 @@
 import { useState } from "react";
 import Calendar from "./Calendar";
 import { useContext } from "react";
-import { StoreContext } from "./StoreContextProvider";
-import styled from "styled-components"
-
-const NOTEPAD=styled.dev``
+import { StoreContext } from "./SetContextProvider";
 
 const AddNote = () => {
   const [noteData, setNoteData] = useState({ title: "", body: "", date: "" });

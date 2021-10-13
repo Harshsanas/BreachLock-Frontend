@@ -1,7 +1,7 @@
 import AddNote from "./Components/AddNote";
 import Card from "./Components/Card";
 import { useContext } from "react";
-import { StoreContext } from "./Components/StoreContextProvider";
+import { StoreContext } from "./Components/SetContextProvider";
 
 const App = () => {
   const { cards } = useContext(StoreContext);
