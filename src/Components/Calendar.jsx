@@ -1,4 +1,4 @@
-const Calendar = ({ data, handleChange }) => {
+export default function Calendar ({ data, handleChange }){
   return (
     <div>
       <input
@@ -11,4 +11,3 @@ const Calendar = ({ data, handleChange }) => {
   );
 };
 
-export default Calendar;

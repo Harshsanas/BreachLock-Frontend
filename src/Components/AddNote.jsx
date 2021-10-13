@@ -6,7 +6,7 @@ import { StoreContext } from "./SetContextProvider";
 const AddNote = () => {
   const [noteData, setNoteData] = useState({ title: "", body: "", date: "" });
 
-  const { cards, setCards } = useContext(StoreContext);
+  const { setCards } = useContext(StoreContext);
 
   const handleChange = (e) => {
     let [name, value] = [e.target.name, e.target.value];
