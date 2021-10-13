@@ -3,3 +3,15 @@
   padding: 0%;
   font-family: sans-serif;
 }
+
+h1{
+  text-align: center;
+  color: white;
+  background-color:#49018C;
+  padding:8px;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 30% 60%;
+}
